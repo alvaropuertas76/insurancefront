@@ -1,0 +1,68 @@
+<section data-anchor="" style="scroll-margin-top: 80px; margin: 0px 0px 0px 0px; padding: 60px 0px 40px 0px"
+    class="bg-white " id="">
+    <section class="section bg-transparent">
+        <div class="container grid gap-6 text-center">
+            <h2 class="text-typestyle-display-2 text-black text-bg-light">
+                Nuestros seguros de siempre, más digitales que nunca.
+            </h2>
+            <div class="text-typestyle-title-regular text-gray text-bg-light">
+
+            </div>
+        </div>
+    </section>
+    <section class="section bg-transparent">
+        <div class="container">
+            <div class="mx-auto ">
+                Please select the event : 
+                <br />
+                <select (change)="changeCombo1($event)">
+                    @for (item of combo1; track item.value) {
+                    <option value="{{item.id}}">{{ item.name }}</option>
+                    }
+                </select>
+                <br /><br /><br />
+
+                Please select the Bike : 
+                <br />
+                <select (change)="changeCombo2($event)" id="bikecombo">
+                    <option value="">Select one bike</option>
+                    @for (item of combo2; track item.value) {
+                    <option value="{{item.id}}">{{ item.brand }} {{ item.model }}</option>
+                    }
+                </select>
+                <br /><br /><br />
+                Please select the Wetsuit : 
+                <br />
+                <select (change)="changeCombo3($event)">
+                    <option value="">Select one wetsuit</option>
+                    @for (item of combo3; track item.value) {
+                    <option value="{{item.id}}">{{ item.brand }} {{ item.model }}</option>
+                    }
+                </select>
+                <br /><br /><br />
+                Please select the Helmet : 
+                <br />
+                <select (change)="changeCombo4($event)">
+                    <option value="">Select one helmet</option>
+                    @for (item of combo4; track item.value) {
+                    <option value="{{item.id}}">{{ item.brand }} {{ item.model }}</option>
+                    }
+                </select>
+                <br />
+                <br />
+                <br />
+                <a _ngcontent-ng-c3074572559="" (click)="enviar()" type="button"
+                    class="button button-dense button-style-contained"><span
+                        _ngcontent-ng-c3074572559="">Presupuestar</span></a>
+
+                <p>{{quote.title}} <b>{{quote.event_name}}</b></p>
+                <p>Here you have the price of your Policy : {{quote.quote}} {{quote.currency}}</p>
+                <br />
+                <p>The probability to rain is : {{quote.probability_rain}} %</p>
+                <br />
+                <p>The market value of all your gear is : {{quote.total_market_value}} {{quote.currency}}</p>
+                <br />
+            </div>
+        </div>
+    </section>
+</section>
