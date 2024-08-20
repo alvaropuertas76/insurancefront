@@ -9,6 +9,7 @@ import { FormBuilder, FormGroup } from '@angular/forms';
   providers: [PolizaTriatlonService],
   templateUrl: './poliza-triatlon.component.html',
   styleUrl: './poliza-triatlon.component.css'
+  
 })
 
 
